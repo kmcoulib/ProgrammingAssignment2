@@ -25,8 +25,8 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Checks if a cached inverted matrix was computed and returns, computes the
-## inverse otherwise
+## Checks if a cached inverted matrix was computed and returns it, carries out
+## a new matrix inversion and returns the result otherwise.
 cacheSolve <- function(x, ...) {
     minv <- x$getminv()
     if(!is.null(minv)) {
